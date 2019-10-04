@@ -1,0 +1,207 @@
+$mainColor: #455a64;
+$mainBg: #fff;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  color: $mainColor;
+  font-family: monospace;
+  font-size: 1.5rem;
+  max-width: 100vw;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: $mainBg;
+}
+
+.Dictionary {
+  max-width: 600px;
+  width: 100%;
+}
+
+.Dictionary select {
+  padding: 5px 10px;
+  margin-bottom: 1rem;
+  background: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.Dictionary table {
+  /* border-collapse: collapse; */
+  font-weight: bold;
+  width: 100%;
+  margin: 0 auto 2rem;
+}
+
+.Dictionary tr:nth-child(even) {
+  background: #e0f7fa;
+}
+
+.Dictionary tr:nth-child(odd) {
+  background: #fff3e0;
+}
+
+.Dictionary td {
+  text-align: left;
+  padding: 10px;
+  position: relative;
+}
+
+.Dictionary .rus {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.Dictionary .eng {
+  display: none;
+  color: #ff5722;
+  margin-bottom: 0.5rem;
+}
+
+.Dictionary .show {
+  display: block;
+}
+
+.Dictionary .help,
+.Dictionary .voice {
+  border: none;
+  background: none;
+  padding: 5px;
+  text-decoration: underline;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.Dictionary .voice {
+  right: 100px;
+}
+
+.Dictionary input {
+  border: none;
+  padding: 5px;
+  transition: 0.1s;
+  font-weight: bold;
+  color: #455a64;
+  font-family: monospace;
+  font-size: 1em;
+  width: 100%;
+}
+
+.Dictionary .right input {
+  background: #a5d6a7;
+  color: #fff;
+}
+
+.Dictionary .reset {
+  text-transform: uppercase;
+  border: 2px solid #ff5722;
+  color: #ff5722;
+  background: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Nav {
+  position: fixed;
+  z-index: 2;
+  /* width: 50%; */
+  height: 100%;
+  left: 0;
+  transform: translateX(-100%);
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  padding: 20px 70px 20px 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.Nav--active {
+  transform: translateX(0);
+}
+
+.Nav-button {
+  position: absolute;
+  background: none;
+  border: none;
+  top: 20px;
+  right: -70px;
+  font-size: 2rem;
+  color: #455a64;
+  cursor: pointer;
+  outline: none;
+  transition: right 0.1s;
+  background: #fff;
+}
+
+.Nav-button--active {
+  right: 20px;
+}
+
+.Nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: #455a64;
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+.Nav .active {
+  color: #ff5722;
+}
+
+.veil {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  left: -100%;
+}
+
+.veil--active {
+  left: 0;
+}
+
+.Tenses {
+  width: 100%;
+  max-width: 600px;
+}
+
+.Tenses-select {
+  padding: 5px 10px;
+  margin-bottom: 1rem;
+  background: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.Tense__rule {
+  p {
+    color: #ff5722;
+  }
+}
